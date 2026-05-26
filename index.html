@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Статичная верстка проекта БТИЗ, подготовленная для переноса макета из Figma."
+    />
+    <title>БТИЗ</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+
+    <div class="page">
+      <header
+        class="site-header"
+        data-figma-frame="Header"
+        data-figma-source="https://www.figma.com/design/k1DYg7LKtayljE3JZ52NnO/"
+      >
+        <div class="container site-header__inner">
+          <a class="brand" href="#" aria-label="БТИЗ">
+            <span class="brand__mark">БТИЗ</span>
+            <span class="brand__text">Макет для верстки</span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="site-navigation"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+
+          <nav
+            class="site-nav"
+            id="site-navigation"
+            aria-label="Основная навигация"
+            data-nav
+          >
+            <a href="#overview">Главная</a>
+            <a href="#program">Программа</a>
+            <a href="#format">Формат</a>
+            <a href="#contact">Заявка</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <section
+          class="section section--hero"
+          id="overview"
+          data-figma-frame="Hero"
+        >
+          <div class="container hero">
+            <div class="hero__content">
+              <p class="eyebrow">БТИЗ / Node 1:1731</p>
+              <h1>Стартовая верстка под макет из Figma.</h1>
+              <p class="hero__text">
+                Проект привязан к переданной ссылке: палитра, ритм блоков,
+                карточки, форма и адаптивная структура подготовлены для
+                дальнейшего pixel-perfect переноса.
+              </p>
+              <div class="button-group" aria-label="Основные действия">
+                <a class="button button--primary" href="#contact">Оставить заявку</a>
+                <a class="button button--secondary" href="#program">Смотреть блоки</a>
+              </div>
+
+              <dl class="hero-metrics" aria-label="Параметры макета">
+                <div>
+                  <dt>Desktop</dt>
+                  <dd>1440 px</dd>
+                </div>
+                <div>
+                  <dt>Mobile</dt>
+                  <dd>390 px</dd>
+                </div>
+                <div>
+                  <dt>Source</dt>
+                  <dd>Figma</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero__media" aria-label="Черновой вид главного экрана">
+              <div class="hero-card">
+                <div class="hero-card__top">
+                  <span class="hero-card__badge">БТИЗ</span>
+                  <span class="hero-card__pill">верстка</span>
+                </div>
+                <h2>Темный hero, белые карточки и яркая CTA-зона.</h2>
+                <div class="hero-card__media"></div>
+                <div class="hero-card__actions">
+                  <span></span>
+                  <strong>70 000 ₽</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section"
+          id="program"
+          data-figma-frame="Content grid"
+        >
+          <div class="container stack stack--large">
+            <div class="section-heading">
+              <p class="eyebrow">Сетка макета</p>
+              <h2>Базовые блоки уже разложены под будущую точную верстку.</h2>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="feature-card__index">01</span>
+                <h3>Дизайн-токены</h3>
+                <p>
+                  Цвета, шрифты, отступы, радиусы и состояния собраны в
+                  переменных CSS, чтобы быстро сверять их с Figma.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-card__index">02</span>
+                <h3>Компоненты</h3>
+                <p>
+                  Кнопки, карточки, сетки, hero и форма вынесены в отдельные
+                  классы с понятными модификаторами.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-card__index">03</span>
+                <h3>Адаптив</h3>
+                <p>
+                  Desktop и mobile подготовлены как две ключевые ширины,
+                  которые видны в переданном Figma-превью.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section section--dark"
+          id="format"
+          data-figma-frame="Form block"
+        >
+          <div class="container split-panel">
+            <div class="section-heading">
+              <p class="eyebrow">Форма и карточки</p>
+              <h2>Темная панель повторяет общий ритм Figma-макета.</h2>
+              <p>
+                Поля, акцентные линии, белые карточки и розовая кнопка готовы
+                для замены на реальные данные из слоев.
+              </p>
+            </div>
+
+            <form class="lead-form" aria-label="Форма заявки">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Введите имя" />
+              </label>
+              <label>
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 000 000-00-00" />
+              </label>
+              <label>
+                <span>Комментарий</span>
+                <textarea name="message" rows="3" placeholder="Коротко о задаче"></textarea>
+              </label>
+              <button class="button button--primary" type="button">Отправить</button>
+            </form>
+          </div>
+        </section>
+
+        <section
+          class="section section--muted"
+          id="contact"
+          data-figma-frame="CTA"
+        >
+          <div class="container callout">
+            <div>
+              <p class="eyebrow">Источник подключен</p>
+              <h2>Ссылка на Figma сохранена в проектной документации.</h2>
+            </div>
+            <a class="button button--primary" href="#overview">Наверх</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
