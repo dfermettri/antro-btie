@@ -44,7 +44,7 @@
 @layer base {
   :root {
     color-scheme: light;
-    --page: #f3f3f1;
+    --page: #f6f6f6;
     --ink: #09211f;
     --muted: #6f7774;
     --line: #e3e3df;
@@ -136,16 +136,20 @@
     position: sticky;
     top: 0;
     z-index: 30;
-    background: rgb(243 243 241 / 90%);
+    background: var(--page);
     backdrop-filter: blur(18px);
   }
 
   .site-header__inner {
     display: grid;
-    min-height: 48px;
+    min-height: 104px;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 38px;
+    gap: 90px;
+  }
+
+  .site-header .shell {
+    width: min(100% - 240px, 1540px);
   }
 
   .hero-card {
@@ -291,24 +295,37 @@
   }
 
   .brand {
-    color: var(--deep);
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .brand img {
+    width: 121px;
+    height: auto;
   }
 
   .site-nav {
     display: flex;
-    gap: 22px;
-    color: #404846;
-    font-size: 12px;
+    align-items: center;
+    gap: 34px;
+    color: #0a0620;
+    font-size: 14px;
     font-weight: 800;
   }
 
   .telegram-link {
-    color: var(--ink);
-    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #0a0620;
+    font-size: 14px;
     font-weight: 800;
+  }
+
+  .telegram-link img {
+    width: 18px;
+    height: 15px;
+    flex: 0 0 auto;
   }
 
   .nav-toggle {
