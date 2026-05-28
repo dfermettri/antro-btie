@@ -5,196 +5,497 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Статичная верстка проекта БТИЗ, подготовленная для переноса макета из Figma."
+      content="Обзор рынка бытовой техники и электроники 2024-2025."
     />
-    <title>БТИЗ</title>
+    <title>Antro - обзор рынка БТиЭ</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
 
-    <div class="page">
-      <header
-        class="site-header"
-        data-figma-frame="Header"
-        data-figma-source="https://www.figma.com/design/k1DYg7LKtayljE3JZ52NnO/"
-      >
-        <div class="container site-header__inner">
-          <a class="brand" href="#" aria-label="БТИЗ">
-            <span class="brand__mark">БТИЗ</span>
-            <span class="brand__text">Макет для верстки</span>
-          </a>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="#" aria-label="Antro">antro</a>
 
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-controls="site-navigation"
-            aria-expanded="false"
-            data-nav-toggle
-          >
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="nav-toggle__bar"></span>
-            <span class="nav-toggle__bar"></span>
-            <span class="nav-toggle__bar"></span>
-          </button>
-
-          <nav
-            class="site-nav"
-            id="site-navigation"
-            aria-label="Основная навигация"
-            data-nav
-          >
-            <a href="#overview">Главная</a>
-            <a href="#program">Программа</a>
-            <a href="#format">Формат</a>
-            <a href="#contact">Заявка</a>
-          </nav>
-        </div>
-      </header>
-
-      <main id="main">
-        <section
-          class="section section--hero"
-          id="overview"
-          data-figma-frame="Hero"
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="site-navigation"
+          aria-expanded="false"
+          data-nav-toggle
         >
-          <div class="container hero">
-            <div class="hero__content">
-              <p class="eyebrow">БТИЗ / Node 1:1731</p>
-              <h1>Стартовая верстка под макет из Figma.</h1>
-              <p class="hero__text">
-                Проект привязан к переданной ссылке: палитра, ритм блоков,
-                карточки, форма и адаптивная структура подготовлены для
-                дальнейшего pixel-perfect переноса.
-              </p>
-              <div class="button-group" aria-label="Основные действия">
-                <a class="button button--primary" href="#contact">Оставить заявку</a>
-                <a class="button button--secondary" href="#program">Смотреть блоки</a>
-              </div>
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
 
-              <dl class="hero-metrics" aria-label="Параметры макета">
-                <div>
-                  <dt>Desktop</dt>
-                  <dd>1440 px</dd>
-                </div>
-                <div>
-                  <dt>Mobile</dt>
-                  <dd>390 px</dd>
-                </div>
-                <div>
-                  <dt>Source</dt>
-                  <dd>Figma</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div class="hero__media" aria-label="Черновой вид главного экрана">
-              <div class="hero-card">
-                <div class="hero-card__top">
-                  <span class="hero-card__badge">БТИЗ</span>
-                  <span class="hero-card__pill">верстка</span>
-                </div>
-                <h2>Темный hero, белые карточки и яркая CTA-зона.</h2>
-                <div class="hero-card__media"></div>
-                <div class="hero-card__actions">
-                  <span></span>
-                  <strong>70 000 ₽</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section"
-          id="program"
-          data-figma-frame="Content grid"
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="Основная навигация"
+          data-nav
         >
-          <div class="container stack stack--large">
-            <div class="section-heading">
-              <p class="eyebrow">Сетка макета</p>
-              <h2>Базовые блоки уже разложены под будущую точную верстку.</h2>
-            </div>
+          <a href="#inside">Обзор</a>
+          <a href="#formats">Стоимость</a>
+          <a href="#reviews">Отзывы</a>
+        </nav>
 
-            <div class="feature-grid">
-              <article class="feature-card">
-                <span class="feature-card__index">01</span>
-                <h3>Дизайн-токены</h3>
-                <p>
-                  Цвета, шрифты, отступы, радиусы и состояния собраны в
-                  переменных CSS, чтобы быстро сверять их с Figma.
-                </p>
-              </article>
+        <a class="telegram-link" href="#order">Telegram канал</a>
+      </div>
+    </header>
 
-              <article class="feature-card">
-                <span class="feature-card__index">02</span>
-                <h3>Компоненты</h3>
-                <p>
-                  Кнопки, карточки, сетки, hero и форма вынесены в отдельные
-                  классы с понятными модификаторами.
-                </p>
-              </article>
-
-              <article class="feature-card">
-                <span class="feature-card__index">03</span>
-                <h3>Адаптив</h3>
-                <p>
-                  Desktop и mobile подготовлены как две ключевые ширины,
-                  которые видны в переданном Figma-превью.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section
-          class="section section--dark"
-          id="format"
-          data-figma-frame="Form block"
-        >
-          <div class="container split-panel">
-            <div class="section-heading">
-              <p class="eyebrow">Форма и карточки</p>
-              <h2>Темная панель повторяет общий ритм Figma-макета.</h2>
+    <main id="main">
+      <section class="hero section-tight" id="top">
+        <div class="shell">
+          <div class="hero-card">
+            <img
+              class="hero-card__image"
+              src="./assets/images/figma/8959e3bf296e75adb66e6d31b04846540e4cb83e.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="hero-card__content">
+              <p class="kicker">Готовый отчет для стратегических решений</p>
+              <h1>Обзор рынка бытовой техники и электроники (БТиЭ) 2024-2025</h1>
               <p>
-                Поля, акцентные линии, белые карточки и розовая кнопка готовы
-                для замены на реальные данные из слоев.
+                Отчет включает исследование рынка, игроков, e-commerce и
+                ключевые тренды потребительского поведения в отрасли.
               </p>
+              <div class="hero-actions" aria-label="Основные действия">
+                <a class="btn btn--pink" href="#order">Получить полный обзор</a>
+                <a class="video-link" href="#inside">
+                  <span aria-hidden="true"></span>
+                  Смотреть обзорный блок бесплатно
+                </a>
+              </div>
+            </div>
+            <div class="discount-badge">
+              <strong>-30% до 20 апреля</strong>
+              <span>успейте купить отчет по выгодной цене</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="preview section-tight" aria-label="Что внутри обзора">
+        <div class="shell preview-shell">
+          <div class="report-window">
+            <div class="report-window__tabs">
+              <span>Рынок бытовой техники</span>
+              <span>Рынок электроники</span>
+            </div>
+            <div class="report-window__body">
+              <div class="inside-copy">
+                <h2>Что внутри обзора</h2>
+                <p>
+                  600+ страниц с аналитикой рынка, оценкой объема, динамикой
+                  каналов продаж, потребительскими сегментами и выводами для
+                  бизнеса.
+                </p>
+                <ul>
+                  <li>Разделы по категориям и каналам продаж</li>
+                  <li>Рейтинги игроков и сравнительные таблицы</li>
+                  <li>Готовые выводы для принятия решений</li>
+                </ul>
+              </div>
+              <div class="mini-dashboard">
+                <div class="pill-stat">1 468 <span>страниц данных</span></div>
+                <div class="chart-card">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="side-stats">
+                  <strong>900+</strong>
+                  <span>графиков</span>
+                  <strong>50+</strong>
+                  <span>таблиц</span>
+                </div>
+              </div>
+            </div>
+            <div class="metrics-row">
+              <article>
+                <strong>4</strong>
+                <span>ключевых раздела исследования</span>
+              </article>
+              <article>
+                <strong>6</strong>
+                <span>категорий бытовой техники</span>
+              </article>
+              <article>
+                <strong>6</strong>
+                <span>рынков и e-commerce сегментов</span>
+              </article>
+              <article>
+                <strong>14</strong>
+                <span>подробных аналитических блоков</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience section" id="audience">
+        <div class="shell narrow">
+          <div class="section-heading section-heading--center">
+            <h2>Кому будет полезно</h2>
+            <div class="tag-row">
+              <span>e-commerce директорам</span>
+              <span>бренд-менеджерам</span>
+              <span>дистрибьюторам</span>
+              <span>маркетингу</span>
+              <span>стратегам</span>
+            </div>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit-card benefit-card--light">
+              <h3>Понять все ключевые данные рынка БТиЭ в одном отчете</h3>
+              <div class="orbit" aria-hidden="true"></div>
+            </article>
+            <article class="benefit-card benefit-card--round">
+              <span aria-hidden="true">✦</span>
+              <p>Понять, какие ниши и бренды продолжают расти в БТиЭ</p>
+            </article>
+            <article class="benefit-card benefit-card--teal">
+              <p>Сверить текущую стратегию развития с динамикой категорий и каналов</p>
+            </article>
+            <article class="benefit-card benefit-card--text">
+              <p>Получить новый контекст о рынке бытовой техники без ручного сбора данных</p>
+            </article>
+            <article class="benefit-card benefit-card--round">
+              <span aria-hidden="true">✦</span>
+              <p>Увидеть динамику и влияние маркетплейсов рынка БТиЭ</p>
+            </article>
+            <article class="benefit-card benefit-card--light">
+              <h3>Эффективнее запустить, измерить и масштабировать рыночный рост</h3>
+              <div class="compass" aria-hidden="true"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contents section" id="inside">
+        <div class="shell">
+          <div class="contents-panel">
+            <div class="section-heading section-heading--center">
+              <h2>Содержание обзора</h2>
+              <div class="tag-row tag-row--dark">
+                <span>рынок БТиЭ</span>
+                <span>бренды</span>
+                <span>e-commerce</span>
+                <span>потребители</span>
+                <span>тренды</span>
+              </div>
             </div>
 
-            <form class="lead-form" aria-label="Форма заявки">
+            <div class="chapter-list">
+              <article class="chapter chapter--dark">
+                <div class="chapter__top">
+                  <span>01</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Мировой рынок потребительской электроники</h3>
+                <ul>
+                  <li>Динамика рынка и прогнозы</li>
+                  <li>Ключевые производители и регионы</li>
+                  <li>Технологические драйверы спроса</li>
+                </ul>
+              </article>
+              <article class="chapter">
+                <div class="chapter__top">
+                  <span>02</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Мировой рынок бытовой техники</h3>
+                <div class="chapter__columns">
+                  <ul>
+                    <li>Крупная бытовая техника</li>
+                    <li>Малая бытовая техника</li>
+                    <li>Сезонные изменения спроса</li>
+                  </ul>
+                  <ul>
+                    <li>Каналы продаж</li>
+                    <li>Ценовые сегменты</li>
+                    <li>Глобальные тренды</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="chapter">
+                <div class="chapter__top">
+                  <span>03</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Российский рынок бытовой техники и электроники</h3>
+                <div class="chapter__columns">
+                  <ul>
+                    <li>Размер рынка и категории</li>
+                    <li>Портреты покупателей</li>
+                    <li>Динамика продаж</li>
+                  </ul>
+                  <ul>
+                    <li>Основные игроки</li>
+                    <li>Импорт и локализация</li>
+                    <li>Распределение каналов</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="chapter chapter--dark">
+                <div class="chapter__top">
+                  <span>04</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Мировой e-commerce рынок бытовой техники и электроники</h3>
+                <ul>
+                  <li>Развитие marketplace-модели и direct-to-consumer каналов</li>
+                  <li>Сравнение digital-продаж по регионам</li>
+                  <li>Покупательские сценарии и точки роста</li>
+                </ul>
+              </article>
+              <article class="chapter">
+                <div class="chapter__top">
+                  <span>05</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Российский e-commerce рынок БТиЭ</h3>
+                <ul>
+                  <li>Структура продаж онлайн</li>
+                  <li>Роль маркетплейсов</li>
+                  <li>Категории роста и сезонность</li>
+                </ul>
+              </article>
+              <article class="chapter">
+                <div class="chapter__top">
+                  <span>06</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Покупательское поведение на рынке БТиЭ</h3>
+                <div class="chapter__columns">
+                  <ul>
+                    <li>Выбор брендов и критерии покупки</li>
+                    <li>Влияние отзывов и контента</li>
+                    <li>Роль рассрочки и сервисов</li>
+                  </ul>
+                  <ul>
+                    <li>Покупательские барьеры</li>
+                    <li>Ценовая чувствительность</li>
+                    <li>Поводы для обновления техники</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="chapter">
+                <div class="chapter__top">
+                  <span>07</span>
+                  <button type="button" aria-label="Раздел открыт">+</button>
+                </div>
+                <h3>Тренды на рынке БТиЭ</h3>
+                <ul>
+                  <li>Умная техника и экосистемы</li>
+                  <li>Энергоэффективность и сервисная модель</li>
+                  <li>Изменение потребительских сценариев</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos section-tight" aria-label="Нашими обзорами пользуются">
+        <div class="shell narrow">
+          <h2>Нашими обзорами пользуются</h2>
+          <div class="logo-cloud">
+            <span>avito</span>
+            <span>erid</span>
+            <span>nielsen</span>
+            <span>ozon</span>
+            <span>yandex</span>
+            <span>tele2</span>
+            <span>mvideo</span>
+            <span>sber</span>
+            <span>wildberries</span>
+            <span>hoff</span>
+            <span>dns</span>
+            <span>aliexpress</span>
+            <span>metro</span>
+            <span>rbc</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="formats section" id="formats">
+        <div class="shell narrow">
+          <h2>Форматы и стоимость обзора</h2>
+          <div class="format-grid">
+            <article class="format-card">
+              <p class="card-label">Публичная версия</p>
+              <h3>Бесплатно</h3>
+              <a class="btn btn--light" href="#order">Скачать обзорный блок</a>
+              <ul>
+                <li>Блок 1: мировой рынок потребительской электроники</li>
+                <li>Блок 2: мировой и российский рынок бытовой техники</li>
+                <li>Фрагменты выводов и структуры исследования</li>
+              </ul>
+            </article>
+            <article class="format-card format-card--dark">
+              <p class="card-label">Полный обзор</p>
+              <h3>70 000 ₽ <span>100 000 ₽</span></h3>
+              <a class="btn btn--pink" href="#order">Получить полный обзор</a>
+              <ul>
+                <li>Блок 1: мировой рынок потребительской электроники</li>
+                <li>Блок 2: мировой рынок бытовой техники</li>
+                <li>Блок 3: российский рынок бытовой техники и электроники</li>
+                <li>Блок 4: мировой и российский e-commerce рынок</li>
+                <li>Блок 5: покупательское поведение рынка БТиЭ</li>
+                <li>Блок 6: тренды рынка бытовой техники и электроники</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section" id="reviews">
+        <div class="shell narrow">
+          <div class="reviews-head">
+            <h2>Отзывы на прошлые обзоры</h2>
+            <p>
+              Эти отчеты уже помогли компаниям лучше оценить рынок, проверить
+              гипотезы и сформировать план действий.
+            </p>
+            <strong>4 500+</strong>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <h3>Farfers</h3>
+              <p>
+                Аналитика помогла быстро собрать контекст и аргументировать
+                стратегические решения внутри команды.
+              </p>
+              <div class="person">
+                <span></span>
+                <div>
+                  <strong>Александр Соловьев</strong>
+                  <small>директор по развитию</small>
+                </div>
+              </div>
+            </article>
+            <article class="review-card">
+              <h3>Mango</h3>
+              <p>
+                Получили структурированный обзор рынка и понятные ориентиры по
+                e-commerce, категориям и трендам.
+              </p>
+              <div class="person">
+                <span></span>
+                <div>
+                  <strong>Мария Иванова</strong>
+                  <small>руководитель маркетинга</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="antro-blocks section">
+        <div class="shell">
+          <div class="research-panel">
+            <div class="panel-topline">Что еще можно изучить</div>
+            <div class="course-card">
+              <img
+                src="./assets/images/figma/58ca64822c966ad3ba2b2329abcc518783fc4275.png"
+                alt=""
+              />
+              <div>
+                <p class="card-label">Юзабилити-аудит e-commerce и сервисов</p>
+                <h3>Помогает найти точки роста в интерфейсе и пути клиента</h3>
+              </div>
+              <div class="course-price">
+                <strong>250 000 ₽</strong>
+                <span>проектный формат</span>
+              </div>
+            </div>
+            <div class="accordion-stack">
+              <button type="button">Потребительские исследования <span>+</span></button>
+              <button type="button">Проектирование и дизайн <span>+</span></button>
+              <button type="button">Формирование бренда <span>+</span></button>
+              <button type="button">Поддержка и развитие <span>+</span></button>
+            </div>
+          </div>
+
+          <div class="research-panel research-panel--second">
+            <div class="panel-topline">Что исследуем в e-commerce</div>
+            <div class="market-card">
+              <div>
+                <p class="card-label">Выпускаем отраслевые e-commerce отчеты</p>
+                <h3>Смотрим рынок, покупателей, каналы и точки роста</h3>
+              </div>
+              <div class="market-card__visual">
+                <img
+                  src="./assets/images/figma/d40c910a4e2389ada9be5f2dcac105a0bb636855.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mini-grid">
+              <article>
+                <strong>Динамика маркетплейсов</strong>
+                <span>рост категорий и игроков</span>
+              </article>
+              <article>
+                <strong>Воронки и конверсия</strong>
+                <span>точки контакта с клиентом</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order section" id="order">
+        <div class="shell">
+          <div class="order-grid">
+            <article class="order-card order-card--price">
+              <p class="card-label">Стоимость обзора рынка (БТиЭ) 2024-2025</p>
+              <ul>
+                <li>полная версия исследования</li>
+                <li>все блоки содержания</li>
+                <li>таблицы, графики и выводы</li>
+                <li>доступ к материалам после оплаты</li>
+              </ul>
+              <strong>70 000 ₽ <span>100 000 ₽</span></strong>
+            </article>
+            <form class="order-form" aria-label="Форма заказа">
               <label>
                 <span>Имя</span>
-                <input type="text" name="name" placeholder="Введите имя" />
+                <input type="text" name="name" />
               </label>
               <label>
                 <span>Телефон</span>
-                <input type="tel" name="phone" placeholder="+7 000 000-00-00" />
+                <input type="tel" name="phone" />
               </label>
               <label>
-                <span>Комментарий</span>
-                <textarea name="message" rows="3" placeholder="Коротко о задаче"></textarea>
+                <span>Email</span>
+                <input type="email" name="email" />
               </label>
-              <button class="button button--primary" type="button">Отправить</button>
+              <button class="btn btn--pink" type="button">Получить полный обзор</button>
+              <p>Свяжемся и отправим обзор после подтверждения заявки</p>
             </form>
           </div>
-        </section>
+        </div>
+      </section>
+    </main>
 
-        <section
-          class="section section--muted"
-          id="contact"
-          data-figma-frame="CTA"
-        >
-          <div class="container callout">
-            <div>
-              <p class="eyebrow">Источник подключен</p>
-              <h2>Ссылка на Figma сохранена в проектной документации.</h2>
-            </div>
-            <a class="button button--primary" href="#overview">Наверх</a>
-          </div>
-        </section>
-      </main>
-    </div>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>Antro Research</span>
+        <span>hello@antro.ru</span>
+        <span>Telegram</span>
+        <span>Политика конфиденциальности</span>
+      </div>
+    </footer>
   </body>
 </html>
