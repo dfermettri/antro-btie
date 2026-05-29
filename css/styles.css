@@ -165,33 +165,13 @@
     aspect-ratio: 1740 / 729;
     overflow: hidden;
     border-radius: 56px;
-    background:
-      radial-gradient(
-        72% 84% at 78% 78%,
-        rgb(2 75 71 / 72%) 0%,
-        rgb(0 42 39 / 30%) 45%,
-        rgb(0 29 27 / 0%) 72%
-      ),
-      linear-gradient(180deg, #001c1a 0%, #00211f 62%, #0d3b43 100%);
+    background: #001d1b;
     box-shadow: none;
-    padding: 82px 80px;
+    padding: 56px 70px;
   }
 
   .hero-card::before {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background:
-      linear-gradient(
-        90deg,
-        #001d1b 0%,
-        #001d1b 45%,
-        rgb(0 29 27 / 84%) 54%,
-        rgb(0 29 27 / 18%) 69%,
-        rgb(0 29 27 / 36%) 100%
-      ),
-      linear-gradient(180deg, rgb(0 0 0 / 8%) 0%, rgb(0 40 38 / 24%) 100%);
-    content: "";
+    content: none;
     pointer-events: none;
   }
 
@@ -199,8 +179,14 @@
     position: relative;
     z-index: 3;
     display: grid;
-    max-width: 810px;
-    gap: 34px;
+    max-width: 980px;
+    gap: 28px;
+  }
+
+  .hero-card__content h1 {
+    max-width: 920px;
+    font-size: clamp(54px, 3.55vw, 66px);
+    line-height: 0.98;
   }
 
   .hero-card__content h1,
@@ -209,7 +195,7 @@
   }
 
   .hero-card__content > p:not(.kicker) {
-    max-width: 760px;
+    max-width: 640px;
     color: var(--white);
     font-size: 24px;
     line-height: 1.22;
@@ -217,15 +203,12 @@
 
   .hero-card__image {
     position: absolute;
-    top: -230px;
-    right: -170px;
+    inset: 0;
     z-index: 0;
-    width: min(73vw, 1260px);
-    min-width: 1080px;
-    height: auto;
-    max-width: none;
-    filter: hue-rotate(145deg) saturate(0.62) brightness(0.82)
-      contrast(1.16);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% center;
   }
 
   .preview-shell {
@@ -464,29 +447,38 @@
 
   .discount-badge {
     position: absolute;
-    right: 80px;
-    bottom: 64px;
+    right: 52px;
+    bottom: 34px;
     z-index: 3;
     display: grid;
-    width: 300px;
-    gap: 6px;
-    border-radius: 50%;
-    aspect-ratio: 1;
+    width: clamp(320px, 27vw, 470px);
+    min-height: 156px;
+    gap: 8px;
+    border-radius: 999px;
+    aspect-ratio: auto;
     place-content: center;
-    background: rgb(0 42 39 / 86%);
+    background:
+      radial-gradient(
+        120% 140% at 14% 0%,
+        rgb(133 140 212 / 52%) 0%,
+        rgb(52 68 132 / 44%) 38%,
+        rgb(25 35 74 / 86%) 100%
+      ),
+      rgb(14 24 56 / 82%);
+    backdrop-filter: blur(4px);
     color: var(--white);
-    padding: 42px;
+    padding: 30px 44px 32px;
     text-align: center;
   }
 
   .discount-badge strong {
-    font-size: 25px;
+    font-size: clamp(30px, 2.2vw, 50px);
     line-height: 1.02;
   }
 
   .discount-badge span {
     color: rgb(255 255 255 / 70%);
-    font-size: 13px;
+    font-size: clamp(14px, 0.95vw, 22px);
   }
 
   .report-window__tabs {
@@ -1197,11 +1189,12 @@
       padding: 62px 54px;
     }
 
+    .hero-card__content h1 {
+      max-width: 630px;
+    }
+
     .hero-card__image {
-      top: -170px;
-      right: -280px;
-      width: 1040px;
-      min-width: 0;
+      object-position: 66% center;
     }
 
     .report-window__body,
@@ -1248,6 +1241,10 @@
       padding: 34px 24px 260px;
     }
 
+    .hero-card__content h1 {
+      max-width: 100%;
+    }
+
     .hero-card::before {
       background:
         linear-gradient(
@@ -1264,21 +1261,23 @@
     }
 
     .hero-card__image {
-      top: auto;
-      right: -210px;
-      bottom: -150px;
-      width: 700px;
+      object-position: 68% center;
     }
 
     .discount-badge {
-      right: 20px;
-      bottom: 24px;
-      width: 150px;
-      padding: 22px;
+      right: 12px;
+      bottom: 20px;
+      width: min(90%, 320px);
+      min-height: 102px;
+      padding: 18px 22px;
     }
 
     .discount-badge strong {
-      font-size: 16px;
+      font-size: clamp(24px, 6.1vw, 30px);
+    }
+
+    .discount-badge span {
+      font-size: 12px;
     }
 
     .report-window__body,
